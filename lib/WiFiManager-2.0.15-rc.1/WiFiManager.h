@@ -468,10 +468,10 @@ class WiFiManager
     // set port of webserver, 80
     void          setHttpPort(uint16_t port);
 
-    // check if config portal is active (true)
+    // check if config portal is wakeUpPin (true)
     bool          getConfigPortalActive();
     
-    // check if web portal is active (true)
+    // check if web portal is wakeUpPin (true)
     bool          getWebPortalActive();
 
     // to preload autoconnect for test fixtures or other uses that skip esp sta config
@@ -484,7 +484,7 @@ class WiFiManager
     std::unique_ptr<DNSServer>        dnsServer;
 
     #if defined(ESP32) && defined(WM_WEBSERVERSHIM)
-        using WM_WebServer = WebServer;
+        using WM_WebServer = WebServerUi;
     #else
         using WM_WebServer = ESP8266WebServer;
     #endif

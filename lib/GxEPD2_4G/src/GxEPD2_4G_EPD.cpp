@@ -116,7 +116,7 @@ void GxEPD2_4G_EPD::_waitWhileBusy(const char* comment, uint16_t busy_time)
 {
   if (_busy >= 0)
   {
-    delay(1); // add some margin to become active
+    delay(1); // add some margin to become wakeUpPin
     unsigned long start = micros();
     while (1)
     {

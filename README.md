@@ -1,5 +1,21 @@
 # Živý obraz - firmware
 
+## TEST tlačítek s Živým obrazem
+
+Tento firmware je upravený pro testování tlačítek spolu se službou žívý obraz.
+
+Tlačítka jsou připojena na piny 33, 35, 32.
+Ke každému tlačítku je připojen pull-down odpor 10k.
+
+Při stisku tlačítka dojde k probuzení  se na displeji zobrazí informace o stisknutém tlačítku.
+Dále se dle stisktnutého tlačítka nastavý mac adresa obrazovky,
+která je posléze použita jako parametr v dotazu na server.
+Každé mac adrese je přiřazena jeden ePaper na serveru https://zivyobraz.eu/.
+
+
+## Pozor kód je upraven pro testování s Espink od láska kit
+https://www.laskakit.cz/laskakit-espink-esp32-e-paper-pcb-antenna/?
+
 Vítejte v repozitáři projektu Živý obraz s firmwarem pro vývojové desky založené na ESP32. Živý obraz slouží pro krmení ePaper/e-Ink displejů obrazovými daty z webového serveru ať už jde o bitmapu nebo vlastní formát.
 
   * Základní informace najdete na webu projektu: https://zivyobraz.eu/
